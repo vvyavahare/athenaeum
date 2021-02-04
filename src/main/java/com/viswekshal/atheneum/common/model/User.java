@@ -1,4 +1,4 @@
-package com.viswekshal.atheneum;
+package com.viswekshal.atheneum.common.model;
 
 import java.time.Instant;
 import javax.persistence.Column;
@@ -12,13 +12,18 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.Where;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import com.viswekshal.atheneum.common.constants.DBConstants;
 
 @Data
 @Entity
