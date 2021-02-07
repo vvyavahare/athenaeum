@@ -1,9 +1,15 @@
 package com.viswekshal.atheneum.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.viswekshal.atheneum.model.BookDTO;
 
 import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
@@ -18,12 +24,12 @@ import lombok.RequiredArgsConstructor;
 public class BooksController {
 
 	@GetMapping
-	public String getAllBooks() {
+	public String findAll() {
 		return "Vishal";
 	}
 
-	@PostMapping
-	public String createBook() {
+	@PutMapping
+	public String update(@Valid @RequestBody BookDTO bookDTO) {
 		return null;
 	}
 

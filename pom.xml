@@ -32,6 +32,14 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<!-- <version>5.3.3</version> -->
+			<scope>test</scope>
+		</dependency>
+
 
 		<dependency>
 			<groupId>mysql</groupId>
@@ -58,7 +66,7 @@
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
-			<version>3.0.0</version>
+			<!-- <version>3.0.0</version> -->
 			<scope>provided</scope>
 		</dependency>
 
@@ -97,6 +105,36 @@
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
 			<version>2.0.1.Final</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.powermock/powermock-api-mockito -->
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-api-mockito</artifactId>
+			<version>1.7.4</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.powermock/powermock-module-junit4-common -->
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-module-junit4</artifactId>
+			<version>2.0.9</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.zapodot/embedded-db-junit -->
+		<dependency>
+			<groupId>org.zapodot</groupId>
+			<artifactId>embedded-db-junit</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+
+		<!-- For Money APIs -->
+		<dependency>
+			<groupId>org.javamoney</groupId>
+			<artifactId>moneta</artifactId>
+			<version>1.1</version>
 		</dependency>
 
 
