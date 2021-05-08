@@ -4,6 +4,11 @@ import java.time.Instant;
 
 import javax.money.MonetaryAmount;
 
+import lombok.Builder;
+import lombok.Data;
+
+@Builder
+@Data
 public class BookDTO {
 
 	private String id;
