@@ -4,6 +4,7 @@ import javax.validation.Valid;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -26,6 +27,8 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping(value = "/v1/books")
 public class BooksController {
+	
+	
 
 	private final IBooksService booksService;
 
@@ -38,7 +41,7 @@ public class BooksController {
 	public ResponseEntity<BookDTO> update(@Valid @RequestBody BookDTO bookDTO) {
 		if (StringUtils.isEmpty(bookDTO.getId())) {
 			// Create
-			booksService
+		
 		} else {
 			// Update
 		}
@@ -47,6 +50,11 @@ public class BooksController {
 
 	@PostMapping
 	public ResponseEntity<BookDTO> create(@Valid @RequestBody BookDTO bookDTO) {
+		return null;
+	}
+	
+	@DeleteMapping 
+	public ResponseEntity<BookDTO> delete(@Valid @RequestBody BookDTO bookDTO){
 		return null;
 	}
 
