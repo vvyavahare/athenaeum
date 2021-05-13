@@ -6,20 +6,32 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "table_address")
 public class Address {
 	@Id
 	@Column(name = "id")
 	private String id;
+	@Column(name = "address_line1")
 	private String addressLine1;
+	@Column(name = "address_line2")
 	private String addressLine2;
+	@Column(name = "postalcode")
 	private String postalCode;
+	@Column(name = "city")
 	private String city;
+	@Column(name = "state")
 	private String state;
+	@Column(name = "country")
 	private String country;
 	@OneToOne(mappedBy = "address")
 	private AuthorName author;
