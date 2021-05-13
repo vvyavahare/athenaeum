@@ -22,7 +22,9 @@ import springfox.documentation.spring.web.plugins.Docket;
 public class BooksManagementApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BooksManagementApplication.class, args);
+		SpringApplication application = new SpringApplication(BooksManagementApplication.class);
+		application.setBanner(new CustomBanner());
+		application.run(args);
 	}
 
 	@Bean

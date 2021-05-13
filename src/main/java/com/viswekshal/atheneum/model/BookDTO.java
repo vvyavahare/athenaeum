@@ -13,7 +13,7 @@ public class BookDTO {
 
 	private String id;
 	private String title;
-	private Name author;
+	private AuthorName author;
 	private MonetaryAmount price;
 	private Instant publishedOn;
 	private Instant auditModifiedOn;
