@@ -25,8 +25,8 @@ public class Book {
 	@Column(name = "title")
 	private String title;
 
-//	@Column(name ="name")
-//	private Name author;
+//	@Column(name ="author")
+//	private AuthorName author;
 //	
 	//private MonetaryAmount price;
 	
