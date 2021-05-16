@@ -6,7 +6,11 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 import com.viswekshal.atheneum.common.security.repository.BooksRepository;
+import com.viswekshal.atheneum.common.validation.Suppliers;
 import com.viswekshal.atheneum.model.Book;
+import com.viswekshal.atheneum.model.BookDTO;
+import com.viswekshal.atheneum.model.mapper.BooksMapper;
+import com.viswekshal.atheneum.model.mapper.Mappers;
 
 import lombok.RequiredArgsConstructor;
 
@@ -23,8 +27,11 @@ public class BooksService implements IBooksService {
 	}
 
 	@Override
-	public Optional<Book> getBookById(String bookId) {
-		return booksRepository.findById(bookId);
+	public Optional<BookDTO> getBookById(String bookId) {
+
+		BookDTO bookDTO = Mappers.BOOKS_MAPPER
+				.toDto(booksRepository.findById(bookId).orElseThrow(Suppliers.objectNotFound("Book", bookId)));
+		return null;
 	}
 
 }

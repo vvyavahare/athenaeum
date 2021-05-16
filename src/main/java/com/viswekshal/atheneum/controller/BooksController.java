@@ -60,7 +60,7 @@ public class BooksController {
 			Address address = Address.builder().id(UUID.randomUUID().toString()).addressLine1(" c/o Scholastic Inc.")
 					.addressLine2("557 Broadway").city("New York").state("NY").country("USA").postalCode("10012-3999")
 					.build();
-			AuthorName a = AuthorName.builder().id(UUID.randomUUID().toString()).firstName("J.").lastName("K.")
+			AuthorName a = AuthorName.builder().id(UUID.randomUUID().toString()).firstName("J.").middleName("K.")
 					.lastName("Rowling").address(address).build();
 			Book b1 = Book.builder().id(UUID.randomUUID().toString()).title("HARRY POTTER AND THE PHILOSOPHER’S STONE")
 					.author(a).build();
@@ -90,7 +90,7 @@ public class BooksController {
 
 	@ApiOperation(value = "GET Books with Id")
 	@GetMapping(value = "/{bookId}")
-	public ResponseEntity<Optional<Book>> getStream(@PathVariable("bookId") String bookId) {
+	public ResponseEntity<Optional<BookDTO>> getStream(@PathVariable("bookId") String bookId) {
 		return new ResponseEntity<>(booksService.getBookById(bookId), HttpStatus.OK);
 	}
 
