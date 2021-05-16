@@ -1,6 +1,7 @@
 package com.viswekshal.atheneum.model;
 
 import java.time.Instant;
+import java.util.Set;
 
 import javax.money.MonetaryAmount;
 
@@ -13,11 +14,11 @@ public class BookDTO {
 
 	private String id;
 	private String title;
-	private AuthorName author;
 	private MonetaryAmount price;
 	private Instant publishedOn;
 	private Instant auditModifiedOn;
 	private Instant auditCreatedOn;
 	private String auditCreatedBy;
 	private String auditUpdatedBy;
+	private AuthorNameDTO author;
 }

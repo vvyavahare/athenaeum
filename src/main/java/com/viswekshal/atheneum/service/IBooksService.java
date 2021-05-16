@@ -10,5 +10,5 @@ public interface IBooksService {
 
 	public List<Book> saveAllAndFlush(List<Book> books) ;
 
-	public Optional<Book> getBookById(String bookId);
+	public Optional<BookDTO> getBookById(String bookId);
 }
